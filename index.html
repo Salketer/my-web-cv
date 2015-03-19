@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- Overwrites -->
+	<link href="css/custom.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+	<section class="container-fluid text-center" id="section_menu">
+		<nav class="row">
+			<div class="col-sm-6 nopadding aboutme" id="aboutme-link"><a href="#" class="text-right" ></a><h2>Mathieu Gallas Parent</h2></div>
+			<div class="col-sm-6 nopadding career" id="career-link"><a href="#" class="text-right" ></a><h2>Work experiences</h2></div>
+			<div class="col-sm-6 nopadding skills" id="skills-link"><a href="#" class="text-right" ></a><h2>Skills & Interests</h2></div>
+			<div class="col-sm-6 nopadding contact" id="contact-link"><a href="#" class="text-right" ></a><h2>Contact</h2></div>
+		</nav>
+	</section>
+	
+	<section class="container-fluid aboutme" id="aboutme">
+		<div class="row">
+			<div class="col-md-5 col-md-offset-1 text-right">
+				<h1>Mathieu Gallas Parent<small><br>@salketer</small></h1>
+				<p class="lead bigger">In a perpetual quest of finding <strong>challenges</strong> I am looking for a <strong>great web software</strong> development <strong>team</strong> where I could <strong>push my skills</strong> to the limit to <strong>learn and teach</strong>.</p>
+				
+				<div class="col-sm-6 text-left vertical-padding"><div class="info-pill"><i class="fa fa-comments-o fa-fw"></i><h3>Users’ best friend</h3>Graphical user interface specialist<br>
+Customers’ difficulties solver</div></div>
+				<div class="col-sm-6 text-left vertical-padding"><div class="info-pill"><i class="fa fa-users fa-fw"></i><h3>Good team player</h3>Dedicated to the tasks at hand<br>
+Reliable cooperative actor</div></div>
+				<div class="col-sm-6 text-left vertical-padding"><div class="info-pill"><i class="fa fa-magic fa-fw"></i><h3>Innovative creator</h3>Trial and success promoter<br>
+Resourceful problem solver</div></div>
+				<div class="col-sm-6 text-left vertical-padding"><div class="info-pill"><i class="fa fa-flask fa-fw"></i><h3>Techno Curious</h3>Code hungry autodidact<br>
+Sceptical library explorator</div></div>
+
+			</div>
+			<div class="col-md-5 toppadded">
+			<p class="jumbo">Who’s <strong>Mathieu</strong> <small class="tiny">in a few numbers</small></p>
+			
+			<div class="btn-group number-pills">
+				<button type="button" class="btn circle height-to-width">15</button>
+				<button type="button" class="btn circle height-to-width active">20 000</button>
+				<button type="button" class="btn circle height-to-width">12</button>
+				<button type="button" class="btn circle height-to-width">12</button>
+				<button type="button" class="btn circle height-to-width">12</button>
+			</div>
+			
+			</div>
+		</div>
+	</section>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/flowtype.js"></script>
+    <script language="javascript">
+		$(document).ready(function(){
+			
+			$('.font-fit').flowtype({minFont:10,maxFont:140,fontRatio:2});
+			
+			var change = function(){
+				$('.height-to-width').height(function(){
+					return $(this).width();
+				});
+			};
+			$(window).resize(function(){change();});
+		});
+    </script>
+  </body>
+</html>
