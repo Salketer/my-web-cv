@@ -142,24 +142,22 @@
 
 			</div>
 			<div class="col-md-1">
-				<nav class="affix-top">
-					<div class="col-sm-6 nopadding aboutme" id="aboutme-link">
-						<a href="#" class="text-right"></a>
-						<h2>Mathieu Gallas Parent</h2>
-					</div>
-					<div class="col-sm-6 nopadding career" id="career-link">
-						<a href="#" class="text-right"></a>
-						<h2>Work experiences</h2>
-					</div>
-					<div class="col-sm-6 nopadding skills" id="skills-link">
-						<a href="#" class="text-right"></a>
-						<h2>Skills & Interests</h2>
-					</div>
-					<div class="col-sm-6 nopadding contact" id="contact-link">
-						<a href="#" class="text-right"></a>
-						<h2>Contact</h2>
-					</div>
-				</nav>
+				<div id="affix-nav">
+					<nav>
+						<div class="aboutme side-nav-link">
+							<a href="#" class="text-right fa fa-user"></a>
+						</div>
+						<div class="career side-nav-link">
+							<a href="#" class="text-right fa fa-suitcase"></a>
+						</div>
+						<div class="skills side-nav-link">
+							<a href="#" class="text-right fa fa-star"></a>
+						</div>
+						<div class="contact side-nav-link">
+							<a href="#" class="text-right fa fa-envelope"></a>
+						</div>
+					</nav>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -171,7 +169,7 @@
 			</div>
 		</div>
 		<div class="row toppadded2">
-			<div class="col-md-10 col-md-offset-1">
+			<div class="col-md-9 col-md-offset-1">
 				<div class="timeline">
 					<div class="jobs">
 						<div class="job active" style="left: 10%; width: 37%">
@@ -231,7 +229,7 @@
 
 		</div>
 		<div class="row">
-			<article class="col-md-10 col-md-offset-1">
+			<article class="col-md-9 col-md-offset-1">
 				<div class="col-md-4">
 					<h1>Developments director</h1>
 					<p class="nopadding">From February 2006</p>
@@ -303,7 +301,7 @@
 			</article>
 		</div>
 		<div class="row">
-			<div class="col-md-offset-1 col-md-10">
+			<div class="col-md-offset-1 col-md-9">
 				<div class="row"><div class="col-md-offset-4 col-md-4">
 					Previous
 				</div>
@@ -422,18 +420,27 @@
 	<script language="javascript">
 		$(document).ready(
 				function() {
-
+					
+					
+					
+					
 					// 			$('.font-fit').flowtype({minFont:10,maxFont:140,fontRatio:2});
 
-					var change = function() {
+					var windowSizeChange = function() {
 						$('.height-to-width').height(function() {
 							return $(this).width();
 						});
+						$('#affix-nav').affix();
+						var newOffset = {
+								top : $('#affix-nav').offset().top-parseInt($('#affix-nav').css('margin-top'),10),
+								bottom : 10
+							};
+						$('#affix-nav').data('bs.affix').options.offset = newOffset;
 					};
 					$(window).resize(function() {
-						change();
+						windowSizeChange();
 					});
-					change();
+					windowSizeChange();
 
 					$('.sliding-content .btn').click(
 							function() {

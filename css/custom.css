@@ -445,3 +445,25 @@ section.skills .info-pill.inverted {
 	content:"l.com";
 }
 
+#affix-nav{
+	top:0px;
+	font-size:32px;
+	margin-top:110px;
+}
+#affix-nav.affix{
+	margin-top:112px;
+}
+#affix-nav.affix-top{
+	z-index:100;
+}
+#affix-nav .side-nav-link{
+	text-align:center;
+	width:70px;
+	border:2px solid white;
+	border-radius:10px;
+	margin-bottom:10px;
+}
+#affix-nav .side-nav-link a{
+	color:white;
+	line-height:66px;
+}
