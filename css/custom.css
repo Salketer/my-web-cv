@@ -99,10 +99,13 @@ html, body {
 	text-align: center;
 	margin-right: 10px;
 	padding-left: -2px;
+	border: 4px solid #1a4459;
+	color:white;
 }
 
 .number-pills button:hover {
-	color: #b24c40;
+	color:white;
+	border: 4px solid #b24c40;
 }
 
 .number-pills button:focus {
@@ -121,7 +124,7 @@ section.aboutme {
 	color: white;
 }
 
-section.aboutme strong {
+section.aboutme strong,section.aboutme a {
 	color: #b24c40;
 }
 
@@ -129,19 +132,30 @@ section.career {
 	color: white;
 }
 
-section.career strong {
+section.career strong,section.career a {
 	color: #b24c40;
 }
 section.skills {
 	color: white;
 }
-section.skills strong {
+section.skills strong,section.skills a {
 	color: #b24c40;
+	
 }
 section.contact{
 	color:#1b475d;
 }
 
+section.contact strong,section.contact a{
+	color:#323232;
+}
+a{
+	font-weight:bold;
+}
+a[target="_blank"]:after {
+  font-family: 'FontAwesome';
+  content: " \f08e";
+}
 .info-pill {
 	border-radius: 10px;
 	padding: 5px 0px;
@@ -430,18 +444,15 @@ section.skills .info-pill.inverted {
 }
 
 #ninja b:after{
-	content:"mailto:";
-}
-#ninja b+b:after{
 	content:"salke";
 }
-#ninja b+b+b:after{
+#ninja b+b:after{
 	content:"ter@";
 }
-#ninja b+b+b+b:after{
+#ninja b+b+b:after{
 	content:"gmai";
 }
-#ninja b+b+b+b+b:after{
+#ninja b+b+b+b:after{
 	content:"l.com";
 }
 
@@ -449,11 +460,6 @@ section.skills .info-pill.inverted {
 	top:0px;
 	font-size:32px;
 	margin-top:110px;
-}
-#affix-nav.affix{
-	margin-top:112px;
-}
-#affix-nav.affix-top{
 	z-index:100;
 }
 #affix-nav .side-nav-link{
@@ -462,8 +468,7 @@ section.skills .info-pill.inverted {
 	border:2px solid white;
 	border-radius:10px;
 	margin-bottom:10px;
-}
-#affix-nav .side-nav-link a{
 	color:white;
 	line-height:66px;
+	display:block;
 }
