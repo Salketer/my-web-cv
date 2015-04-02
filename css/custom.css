@@ -395,16 +395,16 @@ section.skills .info-pill.inverted {
 	background:white;
 	color:black;
 	padding:15px;
-	/* W3C */
-	transform: rotate(-5deg);
-	/* Safari */
-	-webkit-transform: rotate(-5deg);
-	/* Firefox */
-	-moz-transform: rotate(-5deg);
-	/* IE */
-	-ms-transform: rotate(-5deg);
-	/* Opera */
-	-o-transform: rotate(-5deg);
+	/* W3C */ 
+/* 	transform: rotate(-5deg); */
+ 	/* Safari */ 
+/* 	-webkit-transform: rotate(-5deg); */
+ 	/* Firefox */ 
+/* 	-moz-transform: rotate(-5deg); */
+ 	/* IE */ 
+/* 	-ms-transform: rotate(-5deg); */
+ 	/* Opera */ 	
+/* 	-o-transform: rotate(-5deg); */
 	margin-top:25px;
 	margin-left:5%;
 	text-align:center;
