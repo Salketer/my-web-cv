@@ -16,6 +16,9 @@
 html, body {
 	height: 100%;
 }
+body{
+	position:relative;
+}
 
 .container-fluid {
 	min-height: 100%;
@@ -471,4 +474,5 @@ section.skills .info-pill.inverted {
 	color:white;
 	line-height:66px;
 	display:block;
+	padding:0px;
 }

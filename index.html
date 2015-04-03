@@ -17,8 +17,31 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
+    <script type="text/javascript">
+    var ga_debug = false;
+    if(ga_debug){
+    window.ga_debug = {trace: true};
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics_debug.js','ga');
+	
+		ga('create', 'UA-44802911-3', {
+		  'cookieDomain': 'none'
+		});
+    }else{
+    	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+   		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+   		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+   		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ 	  ga('create', 'UA-44802911-3', 'auto');
+	  ga('send', 'pageview');
+    }
+	</script>
+    
 </head>
-<body>
+<body data-spy="scroll" data-target="#affix-nav">
 	<section class="container-fluid text-center" id="section_menu">
 		<nav class="row">
 			<div class="col-sm-6 nopadding aboutme" id="aboutme-link">
@@ -184,18 +207,24 @@
 			<div class="col-md-1">
 				<div id="affix-nav">
 					<nav>
-						<a href="#aboutme" class="aboutme side-nav-link">
+					<ul class="nav nav-tab">
+						<li class="active"><a href="#aboutme" class="aboutme side-nav-link">
 							<i class="text-right fa fa-user"></i>
 						</a>
-						<a href="#career" class="career side-nav-link">
+						</li>
+						<li><a href="#career" class="career side-nav-link">
 							<i class="text-right fa fa-suitcase"></i>
 						</a>
-						<a href="#skills" class="skills side-nav-link">
+						</li>
+						<li><a href="#skills" class="skills side-nav-link">
 							<i class="text-right fa fa-star"></i>
 						</a>
-						<a href="#contact" class="contact side-nav-link">
+						</li>
+						<li><a href="#contact" class="contact side-nav-link">
 							<i class="text-right fa fa-envelope"></i>
 						</a>
+						</li>
+						</ul>
 					</nav>
 				</div>
 			</div>
@@ -272,7 +301,7 @@
 			<div class="slide active-slide">
 			<article class="col-md-9 col-md-offset-1">
 				<div class="col-md-4">
-					<h1>Developments director</h1>
+					<h2>Developments director</h2>
 					<p class="nopadding">From February 2006</p>
 					<p class="nopadding">To March 2010</p>
 					<div class="note">
@@ -287,7 +316,7 @@
 				<div class="col-md-8">
 					<div class="row">
 						<div class="col-md-12">
-							<h2>Missions</h2>
+							<h3>Missions</h3>
 							<ul>
 								<li>Assure a steady progress in developments throughout <strong>multiple
 										projects at the same time</strong>.
@@ -308,7 +337,7 @@
 					</div>
 					<div class="row">
 						<div class="col-md-12">
-							<h2>This offered the chance to create...</h2>
+							<h3>This offered the chance to create...</h3>
 							<div class="col-md-3">
 								<h4>BrutalMedia.net</h4>
 								<p>
@@ -344,7 +373,7 @@
 					<div class="slide hidden-slide">
 			<article class="col-md-9 col-md-offset-1 ">
 				<div class="col-md-4">
-					<h1>Lead programmer</h1>
+					<h2>Lead programmer</h2>
 					<p class="nopadding">From June 2009</p>
 					<p class="nopadding">To February 2011</p>
 					<div class="note">
@@ -355,7 +384,7 @@
 				<div class="col-md-8">
 					<div class="row">
 						<div class="col-md-12">
-							<h2>Missions</h2>
+							<h3>Missions</h3>
 							<ul>
 								<li>Build up entire websites starting from designers' Photoshop layout.
 								</li>
@@ -371,7 +400,7 @@
 					</div>
 					<div class="row">
 						<div class="col-md-12">
-							<h2>This offered the chance to...</h2>
+							<h3>This offered the chance to...</h3>
 							<div class="col-md-3">
 								<h4>Create Atmosphäre.com</h4>
 								<p>
@@ -400,7 +429,7 @@
 			<div class="slide hidden-slide">
 			<article class="col-md-9 col-md-offset-1 ">
 				<div class="col-md-4">
-					<h1>Chief of GUI Developments</h1>
+					<h2>Chief of GUI Developments</h2>
 					<p class="nopadding">Since April 2012</p>
 					<div class="note">
 						<p>TRF Retail aims at optimizing the stocks and assortments of big retailers with their SaaS platform.</p>
@@ -410,7 +439,7 @@
 				<div class="col-md-8">
 					<div class="row">
 						<div class="col-md-12">
-							<h2>Missions</h2>
+							<h3>Missions</h3>
 							<ul>
 								<li>
 									Participate in the full stack development while concentrating on Front-End.
@@ -432,7 +461,7 @@
 					</div>
 					<div class="row">
 						<div class="col-md-12">
-							<h2>This offers the chance to...</h2>
+							<h3>This offers the chance to...</h3>
 							<div class="col-md-3">
 								<h4>Work as a team</h4>
 								<p>
@@ -590,7 +619,7 @@
 								$this.siblings().removeClass('active');
 								$this.addClass('active');
 								var $target = $this.closest('.sliding-content')
-										.find('.slide').eq($this.index());
+										.find('.slide').eq($this.index()).trigger('tracking:slide-display');
 								$target.siblings().addClass('hidden-slide')
 										.removeClass('active-slide');
 								$target.removeClass('hidden-slide');
@@ -606,6 +635,23 @@
 							}
 						});
 						return maxHeight;
+					});
+					
+					$('#affix-nav').on('activate.bs.scrollspy', function (e) {
+						$link = $(this).find("li.active a");
+						var hash = $link.attr("href");
+						console.log(hash);
+						ga('set', {
+							  page: '/'+hash,
+							  title: $(hash).find('h1').text()
+							});
+						ga('send', 'pageview');
+					});
+					$('a[target=_blank]').on('click',function(){
+						ga('send', 'event', 'click', 'outbound', $(this).prop('href'));
+					});
+					$('.slide').on('tracking:slide-display',function(){
+						ga('send', 'event', 'click', 'slide-display', $(this).find('h1').text());
 					});
 				});
 	</script>
