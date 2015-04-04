@@ -35,8 +35,9 @@
    		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
    		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
    		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
- 	  ga('create', 'UA-44802911-3', 'auto');
-	  ga('send', 'pageview');
+		ga('create', 'UA-44802911-3', 'auto');
+		ga('require', 'displayfeatures');
+		ga('send', 'pageview');
     }
 	</script>
     
@@ -204,7 +205,7 @@
 				</div>
 
 			</div>
-			<div class="col-md-1">
+			<div class="col-md-1 hidden-xs hidden-sm">
 				<div id="affix-nav">
 					<nav>
 					<ul class="nav nav-tab">
@@ -546,8 +547,6 @@
 				</div>
 		</div>
 		<div class="col-md-4 toppadded">
-			
-			
 			<p class="lead text-center toppadded">
 				Computers have been the fascination of a lifetime, working with them is a dream come true.
 			</p>
@@ -652,7 +651,7 @@
 						ga('send', 'event', 'click', 'outbound', $(this).prop('href'));
 					});
 					$('.slide').on('tracking:slide-display',function(){
-						ga('send', 'event', 'click', 'slide-display', $(this).find('h1').text());
+						ga('send', 'event', 'click', 'slide-display', $(this).find('h2').text());
 					});
 				});
 	</script>
