@@ -16,7 +16,6 @@
 <!-- Overwrites -->
 <link href="css/custom.css" rel="stylesheet">
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -59,7 +58,7 @@
 			</div>
 			<div class="col-sm-6 nopadding skills" id="skills-link">
 				<a href="#skills" class="text-right"></a>
-				<h2>Skills & Interests</h2>
+				<h2>Skills &amp; Interests</h2>
 			</div>
 			<div class="col-sm-6 nopadding contact" id="contact-link">
 				<a href="#contact" class="text-right"></a>
@@ -134,28 +133,28 @@
 								have an opinion. Before finding one to specialize, some
 								exploration was necessary.</p>
 							<ul class="two-col row">
-								<li class="col-sm-6 col-lg-4">HTML</li>
-								<li class="col-sm-6 col-lg-4">CGI</li>
-								<li class="col-sm-6 col-lg-4">Less</li>
-								<li class="col-sm-6 col-lg-4">CSS</li>
-								<li class="col-sm-6 col-lg-4">Python</li>
-								<li class="col-sm-6 col-lg-4">RequireJS</li>
-								<li class="col-sm-6 col-lg-4">JavaScript</li>
-								<li class="col-sm-6 col-lg-4">MySQL</li>
-								<li class="col-sm-6 col-lg-4">Google API</li>
-								<li class="col-sm-6 col-lg-4">PHP</li>
-								<li class="col-sm-6 col-lg-4">NodeJS</li>
-								<li class="col-sm-6 col-lg-4">CMSMadeSimple</li>
-								<li class="col-sm-6 col-lg-4">ActionScript 2</li>
-								<li class="col-sm-6 col-lg-4">CakePHP</li>
-								<li class="col-sm-6 col-lg-4">Wordpress</li>
-								<li class="col-sm-6 col-lg-4">ActionScript 3</li>
-								<li class="col-sm-6 col-lg-4">ZendFramework 1</li>
-								<li class="col-sm-6 col-lg-4">VisualBasic</li>
-								<li class="col-sm-6 col-lg-4">Lingo</li>
-								<li class="col-sm-6 col-lg-4">ZendFramework 2</li>
-								<li class="col-sm-6 col-lg-4">Meteor</li>
-								<li class="col-sm-6 col-lg-4">MongoDB</li>
+								<li class="col-xs-6 col-lg-4">HTML</li>
+								<li class="col-xs-6 col-lg-4">CGI</li>
+								<li class="col-xs-6 col-lg-4">Less</li>
+								<li class="col-xs-6 col-lg-4">CSS</li>
+								<li class="col-xs-6 col-lg-4">Python</li>
+								<li class="col-xs-6 col-lg-4">RequireJS</li>
+								<li class="col-xs-6 col-lg-4">JavaScript</li>
+								<li class="col-xs-6 col-lg-4">MySQL</li>
+								<li class="col-xs-6 col-lg-4">Google API</li>
+								<li class="col-xs-6 col-lg-4">PHP</li>
+								<li class="col-xs-6 col-lg-4">NodeJS</li>
+								<li class="col-xs-6 col-lg-4">CMxsadeSimple</li>
+								<li class="col-xs-6 col-lg-4">ActionScript 2</li>
+								<li class="col-xs-6 col-lg-4">CakePHP</li>
+								<li class="col-xs-6 col-lg-4">Wordpress</li>
+								<li class="col-xs-6 col-lg-4">ActionScript 3</li>
+								<li class="col-xs-6 col-lg-4">ZendFramework 1</li>
+								<li class="col-xs-6 col-lg-4">VisualBasic</li>
+								<li class="col-xs-6 col-lg-4">Lingo</li>
+								<li class="col-xs-6 col-lg-4">ZendFramework 2</li>
+								<li class="col-xs-6 col-lg-4">Meteor</li>
+								<li class="col-xs-6 col-lg-4">MongoDB</li>
 							</ul>
 						</article>
 						<article class="slide hidden-slide">
@@ -242,7 +241,7 @@
 				<h1>Mathieu's experiences</h1>
 			</div>
 		</div>
-		<div class="row toppadded2">
+		<div class="row toppadded2 hidden-sm hidden-xs">
 			<div class="col-md-9 col-md-offset-1">
 				<div class="timeline">
 					<div class="jobs">
@@ -302,7 +301,7 @@
 			</div>
 
 		</div>
-		<div class="row slide-group">
+		<div class="row md-only slide-group">
 			<div class="slide active-slide">
 			<article class="col-md-9 col-md-offset-1">
 				<div class="col-md-4">
@@ -375,7 +374,7 @@
 				</div>
 			</article>
 			</div>
-					<div class="slide hidden-slide">
+			<div class="slide hidden-slide">
 			<article class="col-md-9 col-md-offset-1 ">
 				<div class="col-md-4">
 					<h2 class="strong">Lead programmer</h2>
@@ -615,12 +614,16 @@
 						
 						$('.slide-group').height(function() {
 							var maxHeight = 0;
-							$(this).find('.slide').each(function() {
-								if ($(this).height() > maxHeight) {
-									maxHeight = $(this).height();
-								}
-							});
-							return maxHeight;
+							if($(this).find('.hidden-slide').is(':visible')){
+								return ;
+							}else{
+								$(this).find('.slide').each(function() {
+									if ($(this).height() > maxHeight) {
+										maxHeight = $(this).height();
+									}
+								});
+								return maxHeight;
+							}
 						});
 					};
 					$(window).resize(function() {
@@ -641,7 +644,8 @@
 								window.setTimeout(function() {
 									$target.addClass('active-slide');
 								}, 1);
-							});
+							}
+					);
 					
 					$('#affix-nav').on('activate.bs.scrollspy', function (e) {
 						$link = $(this).find("li.active a");

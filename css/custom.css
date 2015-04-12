@@ -223,37 +223,22 @@ section.skills .info-pill.inverted {
 	width: auto;
 	max-height: 100%;
 }
-/* Large desktops and laptops */
-@media ( min-width : 1200px) {
+
+
+
+@media ( min-width : 768px) {
 	#section_menu .row>* {
 		height: 50%;
 	}
 }
 
-/* Portrait tablets and medium desktops */
-@media ( min-width : 992px) and (max-width: 1199px) {
-	#section_menu .row>* {
-		height: 50%;
-	}
-}
-/* Portrait tablets and small desktops */
-@media ( min-width : 768px) and (max-width: 991px) {
-	#section_menu .row>* {
-		height: 50%;
-	}
-}
-/* Landscape phones and portrait tablets */
 @media ( max-width : 767px) {
 	#section_menu .row>* {
 		height: 25%;
 	}
 }
-/* Landscape phones and smaller */
-@media ( max-width : 480px) {
-	#section_menu .row>* {
-		height: 25%;
-	}
-}
+
+
 
 .slide-group {
 	position: relative;
@@ -285,6 +270,26 @@ section.skills .info-pill.inverted {
 .slide.hidden-slide {
 	left: -100%;
 }
+
+
+@media (max-width: 991px) {
+	.slide-group.md-only {
+		position: relative;
+		overflow: auto;
+	}
+	
+	.slide-group.md-only .slide {
+		position: static;
+		left: auto;
+		width: auto;
+		padding: 0;
+	}
+	
+	.slide-group.md-only .slide.active-slide,.slide-group.md-only .slide.hidden-slide {
+		left: auto;
+	}
+}
+
 
 .timemarker>div>div, .timemarker>div, .timemarker {
 	background-color: #b24c40;
@@ -405,7 +410,8 @@ section.skills .info-pill.inverted {
 	text-align:center;
 }
 .note img{
-	  width: 100%;
+	max-width: 100%; 
+	  max-height:50px;
 }
 .skill-label{
 }
