@@ -614,16 +614,17 @@
 						
 						$('.slide-group').height(function() {
 							var maxHeight = 0;
-							if($(this).find('.hidden-slide').is(':visible')){
-								return ;
-							}else{
+// 							if($(this).find('.hidden-slide').is(':visible')){
+// 								return ;
+// 							}else{
+								maxHeight = null;
 								$(this).find('.slide').each(function() {
-									if ($(this).height() > maxHeight) {
+									if ($(this).css('position')!=='static' && $(this).height() > maxHeight) {
 										maxHeight = $(this).height();
 									}
 								});
 								return maxHeight;
-							}
+// 							}
 						});
 					};
 					$(window).resize(function() {
